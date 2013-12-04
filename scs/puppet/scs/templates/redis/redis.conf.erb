@@ -1,0 +1,8 @@
+daemonize no
+pidfile /scs/var/run/redis/redis.pid
+port 6379
+logfile /scs/var/log/redis/redis.log
+dir /scs/mnt/redis-state
+<% scope['redis_options'].each do | v | -%>
+<%= v %>
+<% end %>
